@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    /* Primary Colors */
+    --Red: #ff7a7a; 
+    --Green: #38cc8c;
+    /* Accent */
+    --Blue: #6055a5;
+    /* Neutral Colors */
+    --Dark-Blue: #3e3c49;
+    --Grayish-Blue: #b9b6d3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    min-width: 1440px;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    align-items: center;
+    background-image: url(images/bg-intro-desktop.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: var(--Red);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1440px;
+}
+
+.learn, .formulary {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.learn h1, .learn p {
+    color: #fff;
+    margin: auto;
+    padding-left: 12rem;
+    width: auto;
+}
+
+.learn h1 {
+    font-size: 46px;
+    font-weight: 600;
+    line-height: 3rem;
+    padding-bottom: 1.5rem;
+}
+
+.learn p {
+    font-size: 16px;
+}
+
+.trial {
+    background-color: var(--Blue);
+    width: 432px;
+    padding: 1rem;
+    text-align: center;
+    color: #fff;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    box-shadow: 0 7px 0 #9b2b2b43;
+}
+
+#form {
+    background-color: #fff;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 7px 0 #9b2b2b43;
+    text-align: center;
+    padding: 2rem;
+    width: 400px;
+}
+#form fieldset {
+    border: none;
+}
+
+.input-control {
+    width: 100%;
+}
+.input-control input {
+    padding: .7rem .5rem;
+    border-radius: 5px;
+    border: 1px solid #b9b6d3;
+    width: 100%;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+}
+.input-control input::placeholder {
+    padding-left: .8rem;
+    font-weight: bold;
+}
+.input-control i {
+    position: absolute;
+    color: var(--Red);
+    scale: 1.1;
+    margin-top: 12.5px;
+    margin-left: 360px;
+    visibility: hidden;
+}
+.input-control.error i {
+    visibility: visible;
+}
+.input-control .error-msg {
+    margin-bottom: 10px;
+    font-size: 10px;
+    font-weight: 600;
+    font-style: italic;
+    text-align: right;
+    color: #ff7a7a;
+    visibility: hidden;
+}
+.input-control.error .error-msg {
+    visibility: visible;
+}
+
+.input-control.error input {
+    border: 2px solid var(--Red);
+}
+.input-control.success input {
+    border: 2px solid var(--Green);
+}
+
+#btn {
+    background-color: #38cc8c;
+    border: none;
+    border-radius: 5px;
+    padding: 1.2rem 1rem 1rem 1rem;
+    width: 100%;
+    color: #fff;
+    font-weight: bold;
+    box-shadow: 0 3px 0 #279163;
+    margin-bottom: 1rem;
+}
+#btn:hover {
+    cursor: pointer;
+    background-color: #7ee4b8;
+    box-shadow: 0 3px 0 #4eba8b;
+}
+
+.terms {
+    font-size: 12px;
+    margin-bottom: 1rem;
+    color: var(--Grayish-Blue);
+}
+.terms p span {
+    color: var(--Red);
+    font-weight: bold;
+}
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: var(--Red); }
+
+@media screen and (min-width: 901px) and (max-width: 1439px) {
+    body {
+        min-width: 901px;
+        max-width: 1439px;
+    }
+
+    .container {
+        width: auto;
+    }
+}
+@media screen and (max-width: 900px) { 
+    body {
+        min-width: 300px;
+        max-width: 900px;
+        background-image: url(images/bg-intro-mobile.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .container {
+        flex-direction: column;
+        width: auto;
+        padding-top: 2rem;
+    }
+    .learn, .formulary {
+        width: auto;
+    }
+    .learn {
+        padding-bottom: 4rem;
+    }
+    .learn h1, .learn p {
+        padding-left: 0;
+        text-align: center;
+    }
+    .learn h1 {
+        font-size: 32px;
+        line-height: 2rem;
+    }
+    .learn p {
+        max-width: 325px;
+    }
+    .trial {
+        width: 332px;
+        font-size: 14px;
+    }
+    #form {
+        width: 300px;
+        margin-bottom: 1rem;
+    }
+    .input-control i {
+        margin-left: 260px;
+    }
+    .attribution {
+        font-size: 10px;
+    }
+    .attribution a {
+        font-size: 10px;
+    }
+}
+@media screen and (min-width: 851px) and (max-width: 899px) {  
+    body {
+        min-width: 851px;
+        max-width: 899px;
+    }
+    .container {
+        width: 865px;
+    }
+    .trial {
+        width: 582px;
+        font-size: 14px;
+    }
+    #form {
+        width: 550px;
+        margin-bottom: 1rem;
+    }
+    .learn p {
+        max-width: 500px;
+    }
+    .input-control i {
+        margin-left: 500px;
+    }
+    .attribution {
+        font-size: 11px;
+    }
+    .attribution a {
+        font-size: 12px;
+    }
+}
+@media screen and (min-width: 821px) and (max-width: 850px) {  
+    body {
+        min-width: 821px;
+        max-width: 850px;
+    }
+    .container {
+        width: 820px;
+    }
+    .trial {
+        width: 582px;
+        font-size: 14px;
+    }
+    #form {
+        width: 550px;
+        margin-bottom: 1rem;
+    }
+    .learn p {
+        max-width: 500px;
+    }
+    .input-control i {
+        margin-left: 500px;
+    }
+    .attribution {
+        font-size: 11px;
+    }
+    .attribution a {
+        font-size: 12px;
+    }
+}
+@media screen and (min-width: 770px) and (max-width: 820px) {  
+    body {
+        min-width: 770px;
+        max-width: 820px;
+    }
+    .container {
+        width: 785px;
+    }
+    .trial {
+        width: 582px;
+        font-size: 14px;
+    }
+    #form {
+        width: 550px;
+        margin-bottom: 1rem;
+    }
+    .learn p {
+        max-width: 500px;
+    }
+    .input-control i {
+        margin-left: 500px;
+    }
+    .attribution {
+        font-size: 11px;
+    }
+    .attribution a {
+        font-size: 12px;
+    }
+}
+@media screen and (min-width: 451px) and (max-width: 769px) {
+    
+    body {
+        min-width: 451px;
+        max-width: 769px;
+    }
+    .container {
+        width: 750px;
+    }
+    .trial {
+        width: 582px;
+        font-size: 14px;
+    }
+    #form {
+        width: 550px;
+        margin-bottom: 1rem;
+    }
+    .learn p {
+        max-width: 500px;
+    }
+    .input-control i {
+        margin-left: 500px;
+    }
+    .attribution {
+        font-size: 11px;
+    }
+    .attribution a {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 374px) {
+    
+    body {
+        min-width: 322px;
+        max-width: 374px;
+    }
+    .trial {
+        width: 307px;
+        font-size: 14px;
+    }
+    #form {
+        width: 275px;
+        margin-bottom: 1rem;
+    }
+    .input-control i {
+        margin-left: 240px;
+    }
+}
+@media screen and (max-width: 321px) {
+    
+    body {
+        min-width: 300px;
+        max-width: 321px;
+    }
+    .trial {
+        width: 257px;
+        font-size: 12px;
+    }
+    .learn p {
+        max-width: 250px;
+    }
+    #form {
+        width: 225px;
+        margin-bottom: 1rem;
+    }
+    .input-control i {
+        margin-left: 190px;
+    }
+}
